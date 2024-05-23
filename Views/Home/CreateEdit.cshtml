@@ -1,0 +1,29 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<!--This calls the Expense cs from models-->
+@model Spendsmart.Models.Expense
+
+<div class="text-center">
+    <h1 class="display-4">Create or edit an expense</h1>
+</div>
+
+<!--Creating a form for inputs-->
+<form asp-action="CreateEditForm" asp-controller="Home">
+    <input hidden class="form-control" type="number" placeholder="0" asp-for="Id" />
+    
+    <label class="mt-4">Value $</label>
+    <input class="form-control" type="number" placeholder="0" asp-for="Value" steo="0.01" />
+    
+    <label class="mt-4">Description</label>
+    <input class="form-control" type="text" placeholder="add a description" asp-for="Description" />
+
+    <label class="mt-4">Date</label>
+    <input class="form-control" type="text" placeholder="enter a date" asp-for="Date" />
+
+    <label class="mt-4">Monthly</label>
+    <input class="form-check-label" type="checkbox" asp-for="Monthly" />
+    
+    <br />
+    <button class="btn btn-primary mt-4" type="submit">Ok</button>
+</form>
