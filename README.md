@@ -63,5 +63,3 @@ This application demonstrates:
 Feel free to reach out with questions or feedback about this project!
 
 ---
-
-**Built with ❤️ to help users take control of their finances**
